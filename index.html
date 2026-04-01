@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kompleksowy Poradnik Hodowcy Kur</title>
+  <meta name="description" content="Kompleksowy poradnik hodowcy kur - od pierwszego pisklęcia do pełnej hodowli. 50 rozdziałów, 600+ stron wiedzy.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PASEK POSTĘPU CZYTANIA -->
+  <div class="reading-progress" id="readingProgress"></div>
+
+  <!-- NAWIGACJA BOCZNA -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__logo">🐔</div>
+      <div class="sidebar__title">Hodowla Kur</div>
+      <button class="sidebar__close" id="sidebarClose" aria-label="Zamknij menu">✕</button>
+    </div>
+
+    <div class="sidebar__progress">
+      <div class="sidebar__progress-label">
+        <span>Postęp czytania</span>
+        <span id="progressPercent">0%</span>
+      </div>
+      <div class="sidebar__progress-bar">
+        <div class="sidebar__progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+
+    <ul class="sidebar__nav">
+      <li class="sidebar__nav-part">Część I - Wprowadzenie</li>
+      <li><a href="#chapter-1" class="sidebar__nav-link">1. Dlaczego warto hodować kury?</a></li>
+      <li><a href="#chapter-2" class="sidebar__nav-link">2. Planowanie hodowli</a></li>
+
+      <li class="sidebar__nav-part">Część II - Rasy i genetyka</li>
+      <li><a href="#chapter-3" class="sidebar__nav-link">3. Rasy jajeczne</a></li>
+      <li><a href="#chapter-4" class="sidebar__nav-link">4. Rasy mięsne</a></li>
+      <li><a href="#chapter-5" class="sidebar__nav-link">5. Rasy ogólnoużytkowe i ozdobne</a></li>
+      <li><a href="#chapter-6" class="sidebar__nav-link">6. Podstawy genetyki drobiu</a></li>
+
+      <li class="sidebar__nav-part">Część III - Infrastruktura</li>
+      <li><a href="#chapter-7" class="sidebar__nav-link">7. Projektowanie i budowa kurnika</a></li>
+      <li><a href="#chapter-8" class="sidebar__nav-link">8. Wyposażenie kurnika</a></li>
+      <li><a href="#chapter-9" class="sidebar__nav-link">9. Wybieg i pastewnik</a></li>
+
+      <li class="sidebar__nav-part">Część IV - Żywienie</li>
+      <li><a href="#chapter-10" class="sidebar__nav-link">10. Podstawy żywienia kur</a></li>
+      <li><a href="#chapter-11" class="sidebar__nav-link">11. Rodzaje pasz</a></li>
+      <li><a href="#chapter-12" class="sidebar__nav-link">12. Naturalne żywienie i dodatki</a></li>
+      <li><a href="#chapter-13" class="sidebar__nav-link">13. Bilansowanie diety</a></li>
+
+      <li class="sidebar__nav-part">Część V - Nieśność</li>
+      <li><a href="#chapter-14" class="sidebar__nav-link">14. Fizjologia nieśności</a></li>
+      <li><a href="#chapter-15" class="sidebar__nav-link">15. Optymalizacja produkcji jaj</a></li>
+      <li><a href="#chapter-16" class="sidebar__nav-link">16. Zbieranie i przechowywanie jaj</a></li>
+
+      <li class="sidebar__nav-part">Część VI - Rozmnażanie</li>
+      <li><a href="#chapter-17" class="sidebar__nav-link">17. Rozmnażanie naturalne</a></li>
+      <li><a href="#chapter-18" class="sidebar__nav-link">18. Kwoczenie</a></li>
+      <li><a href="#chapter-19" class="sidebar__nav-link">19. Inkubacja sztuczna</a></li>
+
+      <li class="sidebar__nav-part">Część VII - Odchów piskląt</li>
+      <li><a href="#chapter-20" class="sidebar__nav-link">20. Pierwsze dni pisklęcia</a></li>
+      <li><a href="#chapter-21" class="sidebar__nav-link">21. Odchów do 8 tygodnia</a></li>
+      <li><a href="#chapter-22" class="sidebar__nav-link">22. Młode kury 8-18 tydzień</a></li>
+
+      <li class="sidebar__nav-part">Część VIII - Zdrowie</li>
+      <li><a href="#chapter-23" class="sidebar__nav-link">23. Podstawy zdrowia</a></li>
+      <li><a href="#chapter-24" class="sidebar__nav-link">24. Choroby wirusowe</a></li>
+      <li><a href="#chapter-25" class="sidebar__nav-link">25. Choroby bakteryjne</a></li>
+      <li><a href="#chapter-26" class="sidebar__nav-link">26. Choroby pasożytnicze</a></li>
+      <li><a href="#chapter-27" class="sidebar__nav-link">27. Choroby niedoborowe</a></li>
+      <li><a href="#chapter-28" class="sidebar__nav-link">28. Problemy behawioralne</a></li>
+      <li><a href="#chapter-29" class="sidebar__nav-link">29. Apteczka i pierwsza pomoc</a></li>
+      <li><a href="#chapter-30" class="sidebar__nav-link">30. Szczepienia i profilaktyka</a></li>
+
+      <li class="sidebar__nav-part">Część IX - Zarządzanie</li>
+      <li><a href="#chapter-31" class="sidebar__nav-link">31. Higiena i biosekuryta</a></li>
+      <li><a href="#chapter-32" class="sidebar__nav-link">32. Zarządzanie odchodami</a></li>
+      <li><a href="#chapter-33" class="sidebar__nav-link">33. Sezonowe zarządzanie</a></li>
+
+      <li class="sidebar__nav-part">Część X - Ekonomika</li>
+      <li><a href="#chapter-34" class="sidebar__nav-link">34. Rachunkowość</a></li>
+      <li><a href="#chapter-35" class="sidebar__nav-link">35. Sprzedaż produktów</a></li>
+      <li><a href="#chapter-36" class="sidebar__nav-link">36. Skalowanie hodowli</a></li>
+
+      <li class="sidebar__nav-part">Część XI - Hodowla ekologiczna</li>
+      <li><a href="#chapter-37" class="sidebar__nav-link">37. Hodowla ekologiczna kur</a></li>
+      <li><a href="#chapter-38" class="sidebar__nav-link">38. Permakultura i kury</a></li>
+      <li><a href="#chapter-39" class="sidebar__nav-link">39. Alternatywne systemy</a></li>
+
+      <li class="sidebar__nav-part">Część XII - Wystawy</li>
+      <li><a href="#chapter-40" class="sidebar__nav-link">40. Wystawy drobiu</a></li>
+      <li><a href="#chapter-41" class="sidebar__nav-link">41. Przygotowanie do wystawy</a></li>
+      <li><a href="#chapter-42" class="sidebar__nav-link">42. Sędziowanie</a></li>
+
+      <li class="sidebar__nav-part">Część XIII - Zaawansowane</li>
+      <li><a href="#chapter-43" class="sidebar__nav-link">43. Zaawansowana selekcja</a></li>
+      <li><a href="#chapter-44" class="sidebar__nav-link">44. Zaawansowana reprodukcja</a></li>
+      <li><a href="#chapter-45" class="sidebar__nav-link">45. Żywienie precyzyjne</a></li>
+      <li><a href="#chapter-46" class="sidebar__nav-link">46. Diagnostyka laboratoryjna</a></li>
+
+      <li class="sidebar__nav-part">Część XIV - Kontekst globalny</li>
+      <li><a href="#chapter-47" class="sidebar__nav-link">47. Światowa produkcja drobiu</a></li>
+      <li><a href="#chapter-48" class="sidebar__nav-link">48. Zmiany klimatyczne</a></li>
+
+      <li class="sidebar__nav-part">Część XV - Zasoby</li>
+      <li><a href="#chapter-49" class="sidebar__nav-link">49. Nauka i doskonalenie się</a></li>
+    </ul>
+  </nav>
+
+  <!-- OVERLAY -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- PASEK GÓRNY -->
+  <div class="topbar">
+    <button class="topbar__menu-btn" id="menuBtn" aria-label="Otwórz spis treści">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="topbar__title">Kompleksowy Poradnik Hodowcy Kur</div>
+    <div class="topbar__chapter" id="currentChapter"></div>
+  </div>
+
+  <!-- GŁÓWNA TREŚĆ -->
+  <main class="main-content" id="mainContent">
+
+    <!-- ==================== OKŁADKA ==================== -->
+    <section class="cover-page">
+      <div class="cover-page__texture"></div>
+      <div class="cover-page__content">
+        <div class="cover-page__tag">Kompendium wiedzy hodowcy</div>
+        <h1 class="cover-page__title">
+          Kompleksowy<br>
+          <em>Poradnik</em><br>
+          Hodowcy Kur
+        </h1>
+        <p class="cover-page__subtitle">Od pierwszego pisklęcia do pełnej hodowli</p>
+        <div class="cover-page__divider"><span>✦ ✦ ✦</span></div>
+        <div class="cover-page__meta">
+          <span>50 Rozdziałów</span>
+          <span>·</span>
+          <span>600+ Stron</span>
+          <span>·</span>
+          <span>Wydanie 2026</span>
+        </div>
+      </div>
+      <div class="cover-page__footer">
+        <div class="cover-page__illustration">🐔</div>
+      </div>
+    </section>
+
+    <!-- ==================== WSTĘP ==================== -->
+    <section class="front-matter">
+      <div class="content-column">
+        <p class="lead-text">Trzymasz w rękach poradnik, który powstał z jednego prostego powodu - żebyś nie musiał popełniać tych samych błędów co tysiące hodowców przed tobą.</p>
+
+        <p>Hodowla kur wygląda łatwo, dopóki nie zaczniesz. Wtedy okazuje się, że proste pytania - co kupić, gdzie postawić kurnik, czym karmić - mają dziesiątki odpowiedzi, z których połowa jest sprzeczna. Ten ebook nie udaje, że zna jedyną słuszną drogę. Ale pokazuje drogi sprawdzone, poparte wiedzą weterynaryjną, zootechniczną i - przede wszystkim - praktyką hodowlaną.</p>
+
+        <p>Znajdziesz tu wszystko, czego potrzebujesz: od wyboru pierwszych kur po zaawansowaną selekcję genetyczną, od budowy kurnika po diagnostykę laboratoryjną, od codziennego karmienia po bilansowanie diet na poziomie profesjonalnej fermy. Nie musisz czytać od deski do deski - skacz do rozdziałów, które cię interesują. Ale jeśli zaczynasz od zera, zacznij od rozdziału pierwszego. Jest tam parę rzeczy, które warto wiedzieć, zanim kupisz pierwszą kurę.</p>
+
+        <blockquote class="pull-quote">
+          <p>Dobra hodowla zaczyna się od dobrego pytania: czy naprawdę chcę to robić? Jeśli odpowiedź brzmi tak - ten poradnik przeprowadzi cię przez wszystko, co musisz wiedzieć.</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ==================== SPIS TREŚCI ==================== -->
+    <section class="toc-page content-column">
+      <h2 class="toc-page__title">Spis treści</h2>
+
+      <div class="toc-part">
+        <h3 class="toc-part__label">Część I - Wprowadzenie i planowanie</h3>
+        <ol class="toc-list">
+          <li class="toc-list__item"><a href="#chapter-1" class="toc-list__link"><span class="toc-list__name">1. Dlaczego warto hodować kury?</span><span class="toc-list__dots"></span><span class="toc-list__page">12</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-2" class="toc-list__link"><span class="toc-list__name">2. Planowanie hodowli - od czego zacząć?</span><span class="toc-list__dots"></span><span class="toc-list__page">28</span></a></li>
+        </ol>
+      </div>
+
+      <div class="toc-part">
+        <h3 class="toc-part__label">Część II - Rasy i genetyka</h3>
+        <ol class="toc-list">
+          <li class="toc-list__item"><a href="#chapter-3" class="toc-list__link"><span class="toc-list__name">3. Przegląd ras kur - rasy jajeczne</span><span class="toc-list__dots"></span><span class="toc-list__page">46</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-4" class="toc-list__link"><span class="toc-list__name">4. Przegląd ras kur - rasy mięsne</span><span class="toc-list__dots"></span><span class="toc-list__page">68</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-5" class="toc-list__link"><span class="toc-list__name">5. Rasy ogólnoużytkowe i ozdobne</span><span class="toc-list__dots"></span><span class="toc-list__page">82</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-6" class="toc-list__link"><span class="toc-list__name">6. Podstawy genetyki drobiu</span><span class="toc-list__dots"></span><span class="toc-list__page">98</span></a></li>
+        </ol>
+      </div>
+
+      <div class="toc-part">
+        <h3 class="toc-part__label">Część III - Infrastruktura i wyposażenie</h3>
+        <ol class="toc-list">
+          <li class="toc-list__item"><a href="#chapter-7" class="toc-list__link"><span class="toc-list__name">7. Projektowanie i budowa kurnika</span><span class="toc-list__dots"></span><span class="toc-list__page">116</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-8" class="toc-list__link"><span class="toc-list__name">8. Wyposażenie kurnika</span><span class="toc-list__dots"></span><span class="toc-list__page">140</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-9" class="toc-list__link"><span class="toc-list__name">9. Wybieg i pastewnik</span><span class="toc-list__dots"></span><span class="toc-list__page">160</span></a></li>
+        </ol>
+      </div>
+
+      <div class="toc-part">
+        <h3 class="toc-part__label">Część IV - Żywienie</h3>
+        <ol class="toc-list">
+          <li class="toc-list__item"><a href="#chapter-10" class="toc-list__link"><span class="toc-list__name">10. Podstawy żywienia kur</span><span class="toc-list__dots"></span><span class="toc-list__page">174</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-11" class="toc-list__link"><span class="toc-list__name">11. Rodzaje pasz i sposoby karmienia</span><span class="toc-list__dots"></span><span class="toc-list__page">192</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-12" class="toc-list__link"><span class="toc-list__name">12. Naturalne żywienie i dodatki</span><span class="toc-list__dots"></span><span class="toc-list__page">218</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-13" class="toc-list__link"><span class="toc-list__name">13. Bilansowanie diety</span><span class="toc-list__dots"></span><span class="toc-list__page">242</span></a></li>
+        </ol>
+      </div>
+
+      <div class="toc-part">
+        <h3 class="toc-part__label">Część V - Nieśność i produkcja jaj</h3>
+        <ol class="toc-list">
+          <li class="toc-list__item"><a href="#chapter-14" class="toc-list__link"><span class="toc-list__name">14. Fizjologia nieśności</span><span class="toc-list__dots"></span><span class="toc-list__page">256</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-15" class="toc-list__link"><span class="toc-list__name">15. Optymalizacja produkcji jaj</span><span class="toc-list__dots"></span><span class="toc-list__page">274</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-16" class="toc-list__link"><span class="toc-list__name">16. Zbieranie, przechowywanie i klasyfikacja jaj</span><span class="toc-list__dots"></span><span class="toc-list__page">290</span></a></li>
+        </ol>
+      </div>
+
+      <div class="toc-part">
+        <h3 class="toc-part__label">Część VI - Rozmnażanie i wylęganie</h3>
+        <ol class="toc-list">
+          <li class="toc-list__item"><a href="#chapter-17" class="toc-list__link"><span class="toc-list__name">17. Rozmnażanie naturalne</span><span class="toc-list__dots"></span><span class="toc-list__page">308</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-18" class="toc-list__link"><span class="toc-list__name">18. Kwoczenie i naturalne wylęganie</span><span class="toc-list__dots"></span><span class="toc-list__page">322</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-19" class="toc-list__link"><span class="toc-list__name">19. Inkubacja sztuczna</span><span class="toc-list__dots"></span><span class="toc-list__page">340</span></a></li>
+        </ol>
+      </div>
+
+      <div class="toc-part">
+        <h3 class="toc-part__label">Część VII - Odchów piskląt i młodych kur</h3>
+        <ol class="toc-list">
+          <li class="toc-list__item"><a href="#chapter-20" class="toc-list__link"><span class="toc-list__name">20. Pierwsze dni pisklęcia</span><span class="toc-list__dots"></span><span class="toc-list__page">364</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-21" class="toc-list__link"><span class="toc-list__name">21. Odchów piskląt do 8 tygodnia</span><span class="toc-list__dots"></span><span class="toc-list__page">380</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-22" class="toc-list__link"><span class="toc-list__name">22. Młode kury - od 8 do 18 tygodnia</span><span class="toc-list__dots"></span><span class="toc-list__page">398</span></a></li>
+        </ol>
+      </div>
+
+      <div class="toc-part">
+        <h3 class="toc-part__label">Część VIII - Zdrowie i weterynaria</h3>
+        <ol class="toc-list">
+          <li class="toc-list__item"><a href="#chapter-23" class="toc-list__link"><span class="toc-list__name">23. Podstawy zdrowia i dobrostanu</span><span class="toc-list__dots"></span><span class="toc-list__page">412</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-24" class="toc-list__link"><span class="toc-list__name">24. Choroby wirusowe</span><span class="toc-list__dots"></span><span class="toc-list__page">426</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-25" class="toc-list__link"><span class="toc-list__name">25. Choroby bakteryjne</span><span class="toc-list__dots"></span><span class="toc-list__page">448</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-26" class="toc-list__link"><span class="toc-list__name">26. Choroby pasożytnicze</span><span class="toc-list__dots"></span><span class="toc-list__page">466</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-27" class="toc-list__link"><span class="toc-list__name">27. Choroby niedoborowe i metaboliczne</span><span class="toc-list__dots"></span><span class="toc-list__page">486</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-28" class="toc-list__link"><span class="toc-list__name">28. Problemy behawioralne</span><span class="toc-list__dots"></span><span class="toc-list__page">502</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-29" class="toc-list__link"><span class="toc-list__name">29. Apteczka i pierwsza pomoc</span><span class="toc-list__dots"></span><span class="toc-list__page">518</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-30" class="toc-list__link"><span class="toc-list__name">30. Szczepienia i profilaktyka</span><span class="toc-list__dots"></span><span class="toc-list__page">536</span></a></li>
+        </ol>
+      </div>
+
+      <div class="toc-part">
+        <h3 class="toc-part__label">Część IX - Zarządzanie kurnikiem i higiena</h3>
+        <ol class="toc-list">
+          <li class="toc-list__item"><a href="#chapter-31" class="toc-list__link"><span class="toc-list__name">31. Higiena i biosekuryta</span><span class="toc-list__dots"></span><span class="toc-list__page">552</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-32" class="toc-list__link"><span class="toc-list__name">32. Zarządzanie odchodami i nawozem</span><span class="toc-list__dots"></span><span class="toc-list__page">566</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-33" class="toc-list__link"><span class="toc-list__name">33. Sezonowe zarządzanie kurnikiem</span><span class="toc-list__dots"></span><span class="toc-list__page">580</span></a></li>
+        </ol>
+      </div>
+
+      <div class="toc-part">
+        <h3 class="toc-part__label">Część X - Ekonomika hodowli</h3>
+        <ol class="toc-list">
+          <li class="toc-list__item"><a href="#chapter-34" class="toc-list__link"><span class="toc-list__name">34. Rachunkowość w hodowli kur</span><span class="toc-list__dots"></span><span class="toc-list__page">596</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-35" class="toc-list__link"><span class="toc-list__name">35. Sprzedaż produktów z hodowli</span><span class="toc-list__dots"></span><span class="toc-list__page">612</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-36" class="toc-list__link"><span class="toc-list__name">36. Skalowanie hodowli</span><span class="toc-list__dots"></span><span class="toc-list__page">628</span></a></li>
+        </ol>
+      </div>
+
+      <div class="toc-part">
+        <h3 class="toc-part__label">Część XI - Hodowla ekologiczna</h3>
+        <ol class="toc-list">
+          <li class="toc-list__item"><a href="#chapter-37" class="toc-list__link"><span class="toc-list__name">37. Hodowla ekologiczna kur</span><span class="toc-list__dots"></span><span class="toc-list__page">642</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-38" class="toc-list__link"><span class="toc-list__name">38. Permakultura i kury</span><span class="toc-list__dots"></span><span class="toc-list__page">656</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-39" class="toc-list__link"><span class="toc-list__name">39. Alternatywne systemy utrzymania</span><span class="toc-list__dots"></span><span class="toc-list__page">670</span></a></li>
+        </ol>
+      </div>
+
+      <div class="toc-part">
+        <h3 class="toc-part__label">Część XII - Hodowla wystawowa</h3>
+        <ol class="toc-list">
+          <li class="toc-list__item"><a href="#chapter-40" class="toc-list__link"><span class="toc-list__name">40. Wystawy drobiu w Polsce i Europie</span><span class="toc-list__dots"></span><span class="toc-list__page">686</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-41" class="toc-list__link"><span class="toc-list__name">41. Przygotowanie kur do wystawy</span><span class="toc-list__dots"></span><span class="toc-list__page">698</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-42" class="toc-list__link"><span class="toc-list__name">42. Sędziowanie i system oceniania</span><span class="toc-list__dots"></span><span class="toc-list__page">712</span></a></li>
+        </ol>
+      </div>
+
+      <div class="toc-part">
+        <h3 class="toc-part__label">Część XIII - Zaawansowane techniki</h3>
+        <ol class="toc-list">
+          <li class="toc-list__item"><a href="#chapter-43" class="toc-list__link"><span class="toc-list__name">43. Zaawansowana selekcja i hodowla</span><span class="toc-list__dots"></span><span class="toc-list__page">726</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-44" class="toc-list__link"><span class="toc-list__name">44. Zaawansowana reprodukcja</span><span class="toc-list__dots"></span><span class="toc-list__page">742</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-45" class="toc-list__link"><span class="toc-list__name">45. Żywienie precyzyjne</span><span class="toc-list__dots"></span><span class="toc-list__page">758</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-46" class="toc-list__link"><span class="toc-list__name">46. Diagnostyka laboratoryjna</span><span class="toc-list__dots"></span><span class="toc-list__page">774</span></a></li>
+        </ol>
+      </div>
+
+      <div class="toc-part">
+        <h3 class="toc-part__label">Część XIV - Kontekst globalny</h3>
+        <ol class="toc-list">
+          <li class="toc-list__item"><a href="#chapter-47" class="toc-list__link"><span class="toc-list__name">47. Światowa produkcja drobiu</span><span class="toc-list__dots"></span><span class="toc-list__page">790</span></a></li>
+          <li class="toc-list__item"><a href="#chapter-48" class="toc-list__link"><span class="toc-list__name">48. Zmiany klimatyczne a hodowla</span><span class="toc-list__dots"></span><span class="toc-list__page">804</span></a></li>
+        </ol>
+      </div>
+
+      <div class="toc-part">
+        <h3 class="toc-part__label">Część XV - Zasoby i społeczność</h3>
+        <ol class="toc-list">
+          <li class="toc-list__item"><a href="#chapter-49" class="toc-list__link"><span class="toc-list__name">49. Nauka i doskonalenie się</span><span class="toc-list__dots"></span><span class="toc-list__page">816</span></a></li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="section-divider"><span class="section-divider__ornament">✦</span></div>
+
+    <!-- ==================== ROZDZIAŁ 1 ==================== -->
+    <article class="chapter" id="chapter-1">
+      <header class="chapter-header">
+        <div class="chapter-header__bg"></div>
+        <div class="chapter-header__content content-column">
+          <span class="chapter-number">Rozdział 1</span>
+          <h1 class="chapter-title">Dlaczego warto hodować kury?</h1>
+          <p class="chapter-lead">Zanim wydasz pierwszy grosz na kurnik, paszę czy same kury, odpowiedz sobie na jedno pytanie: dlaczego chcesz to robić? Od tej odpowiedzi zależy wszystko, co nastąpi później.</p>
+          <div class="chapter-meta">
+            <span class="chapter-meta__item">⏱ Czas czytania: ok. 15 minut</span>
+            <span class="chapter-meta__item">📄 7 podrozdziałów</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="chapter-body content-column">
+
+        <h2 class="section-title">1.1. Historia domestykacji kury domowej</h2>
+
+        <p>Kura domowa - Gallus gallus domesticus - towarzyszy człowiekowi od ponad ośmiu tysięcy lat. Jej dziki przodek, kur bankiwa, do dziś chodzi po lasach Azji Południowo-Wschodniej. Pierwsze dowody na udomowienie pochodzą z terenów dzisiejszych Chin i doliny Indusu, gdzie ludzie odkryli coś, co zmieniło ich życie: ptak, który produkuje jaja niemal codziennie, jest łatwy w utrzymaniu i nie wymaga pastwisk jak bydło.</p>
+
+        <p>Z Azji kura dotarła do starożytnego Egiptu, Grecji i Rzymu. Rzymianie byli pierwszymi, którzy potraktowali hodowlę kur poważnie - pisali o niej traktaty, selekcjonowali rasy pod kątem nieśności i mięsności, budowali specjalne pomieszczenia do odchowu. Kolumella w swoim dziele „De Re Rustica" z I wieku naszej ery opisuje zasady, które zaskakująco dobrze trzymają się do dziś.</p>
+
+        <p>W średniowiecznej Europie kury były walutą. Chłopi płacili nimi dziesięciny, opłacali dzierżawę, wymieniali na towary na targach. Jaja były tak powszechnym produktem, że stały się symbolem codzienności - stąd powiedzenie „nie ucz kury jaj nieść". Kura była zwierzęciem każdego podwórka, niezależnie od statusu majątkowego.</p>
+
+        <div class="tip-box tip-box--fact">
+          <div class="tip-box__icon">🌾</div>
+          <div class="tip-box__content">
+            <strong class="tip-box__label">Ciekawostka</strong>
+            <p>Najstarsze znane przedstawienie kury domowej pochodzi z pieczęci cylindrycznej z Mezopotamii, datowanej na około 2000 rok p.n.e. Ale genetyka potwierdza, że udomowienie nastąpiło znacznie wcześniej - prawdopodobnie 6000-8000 lat temu w Azji Południowo-Wschodniej.</p>
+          </div>
+        </div>
+
+        <p>Rewolucja przemysłowa zmieniła wszystko. W XX wieku hodowla kur przeszła z podwórka do hal produkcyjnych. Pojawiły się hybrydy zdolne znieść ponad 300 jaj rocznie - kosztem zdrowia, długowieczności i smaku. Jednocześnie właśnie ta industrializacja sprawiła, że coraz więcej ludzi wraca do hodowli przydomowej. Szukają jaj, które smakują jak te od babci. Szukają kontroli nad tym, co jedzą. I szukają czegoś, co trudno kupić w sklepie - kontaktu z naturą i satysfakcji z własnej produkcji.</p>
+
+        <div class="section-divider"><span class="section-divider__ornament">✦</span></div>
+
+        <h2 class="section-title">1.2. Korzyści z hodowli przydomowej</h2>
+
+        <p>Zacznijmy od tego, co oczywiste: jaja. Świeże jajo z własnego kurnika to zupełnie inny produkt niż to, które kupujesz w supermarkecie. Żółtko jest intensywnie pomarańczowe - nie blade, żółtawe jak w jajach klatkowych. Smak jest wyraźniejszy, pełniejszy. A kiedy wiesz, co twoja kura jadła, wiesz też, co jesz ty sam.</p>
+
+        <p>Ale jaja to dopiero początek. Kury produkują najlepszy nawóz, jaki można sobie wyobrazić. Obornik drobiowy jest kilkukrotnie bogatszy w azot, fosfor i potas niż obornik od bydła czy koni. Po odpowiednim skompostowaniu to złoto dla każdego ogrodu warzywnego. Jeśli masz ogród, kury zamykają obieg - resztki z kuchni i ogrodu idą do kur, obornik wraca do ogrodu.</p>
+
+        <ul>
+          <li>Świeże jaja codziennie - od 4-6 kur wystarczy dla przeciętnej rodziny</li>
+          <li>Naturalny nawóz do ogrodu - bogaty w azot, fosfor i potas</li>
+          <li>Biologiczne zwalczanie szkodników - kury zjadają ślimaki, larwy, kleszcze</li>
+          <li>Utylizacja resztek kuchennych - mniej odpadów, więcej sensu</li>
+          <li>Mięso z własnej hodowli - pełna kontrola nad jakością</li>
+          <li>Edukacja dzieci - odpowiedzialność, biologia i cierpliwość w jednym</li>
+        </ul>
+
+        <blockquote class="pull-quote">
+          <p>Pięć kur na podwórku to nie hobby. To mała fabryka jaj, kompostownia, biologiczne zwalczanie szkodników i lekcja przyrody - w jednym.</p>
+        </blockquote>
+
+        <div class="section-divider"><span class="section-divider__ornament">✦</span></div>
+
+        <h2 class="section-title">1.3. Hodowla jako hobby vs. hodowla zarobkowa</h2>
+
+        <p>To rozróżnienie musisz zrobić na samym początku, bo od niego zależy wszystko: ile kur kupić, jaki kurnik zbudować, ile czasu poświęcić i - co najważniejsze - jakie masz wobec tego oczekiwania finansowe.</p>
+
+        <p>Hodowla hobbystyczna to zazwyczaj od 3 do 20 kur. Cel jest prosty: jaja dla siebie i rodziny, może trochę dla sąsiadów. Kurnik może być mały, prosty, nawet zrobiony z palet. Koszty są niskie, a satysfakcja - ogromna. Nie musisz się martwić o certyfikaty, rejestrację sprzedaży ani normy weterynaryjne w takim stopniu jak hodowla komercyjna.</p>
+
+        <p>Hodowla zarobkowa to zupełnie inna liga. Powyżej pewnej skali - w Polsce to zazwyczaj powyżej 350 sztuk drobiu - wchodzisz w świat przepisów sanitarnych, rejestracji u powiatowego lekarza weterynarii, obowiązkowych szczepień i kontroli. To nie znaczy, że nie warto - ale trzeba to robić świadomie, z kalkulacją kosztów i znajomością prawa.</p>
+
+        <div class="tip-box tip-box--warning">
+          <div class="tip-box__icon">⚠️</div>
+          <div class="tip-box__content">
+            <strong class="tip-box__label">Uwaga</strong>
+            <p>Nawet hobbystyczny hodowca ma obowiązek zgłosić posiadanie drobiu do powiatowego lekarza weterynarii. To wymóg wynikający z przepisów o ochronie zdrowia zwierząt i bioasekuracji - nie z chęci utrudniania ci życia. Zgłoszenie jest bezpłatne i zajmuje kilka minut.</p>
+          </div>
+        </div>
+
+        <div class="section-divider"><span class="section-divider__ornament">✦</span></div>
+
+        <h2 class="section-title">1.4. Wpływ hodowli na środowisko</h2>
+
+        <p>Ten temat budzi emocje i warto go postawić uczciwie. Tak, przemysłowa hodowla drobiu przyczynia się do emisji gazów cieplarnianych, zużycia wody i degradacji gleby. Ale hodowla przydomowa na małą skalę to zupełnie inna historia.</p>
+
+        <p>Kilka kur na wybiegu to zamknięty ekosystem. Kury przetwarzają resztki roślinne na nawóz, zjadają owady i chwasty, napowietrzają glebę grzebiąc. Ich odchody - prawidłowo skompostowane - wracają do ziemi jako bogaty nawóz organiczny, redukując potrzebę stosowania nawozów sztucznych. To jest model zrównoważony w najczystszej postaci.</p>
+
+        <div class="tip-box tip-box--tip">
+          <div class="tip-box__icon">💡</div>
+          <div class="tip-box__content">
+            <strong class="tip-box__label">Wskazówka</strong>
+            <p>Jeśli masz ogród warzywny, kury są twoim najlepszym sojusznikiem. Jesienią wpuść je na grządki po zbiorach - zjedzą resztki, larwy szkodników i chwasty, jednocześnie nawożąc glebę. Wiosną grządki będą gotowe do sadzenia praktycznie bez dodatkowej pracy.</p>
+          </div>
+        </div>
+
+        <div class="section-divider"><span class="section-divider__ornament">✦</span></div>
+
+        <h2 class="section-title">1.5. Psychologiczne aspekty posiadania kur</h2>
+
+        <p>To może brzmi jak żart, ale nie jest. Obserwowanie kur działa terapeutycznie. Mają swoje hierarchie, osobowości, nawyki. Jedna zawsze jest pierwsza przy karmniku. Inna upiera się spać na najwyższej grzędzie. Trzecia ma obsesję na punkcie kopania dołów w ziemi. Ich zachowania są fascynujące, przewidywalne i uspokajające jednocześnie.</p>
+
+        <p>Badania wskazują, że kontakt ze zwierzętami obniża poziom kortyzolu - hormonu stresu. Codzienna rutyna karmienia, zbierania jaj, sprawdzania stada daje poczucie porządku i celu. A kiedy twoja kura po raz pierwszy zniesie jajo, poczujesz coś dziwnego - dumę. Dumę z czegoś, co sama kura zrobiła zupełnie bez twojej pomocy, ale co ty umożliwiłeś.</p>
+
+        <div class="section-divider"><span class="section-divider__ornament">✦</span></div>
+
+        <h2 class="section-title">1.6. Aspekty prawne hodowli kur w Polsce</h2>
+
+        <p>Zanim wybudujesz kurnik, sprawdź trzy rzeczy. Po pierwsze - czy plan zagospodarowania przestrzennego twojej gminy pozwala na chów zwierząt na twojej działce. Po drugie - czy regulamin wspólnoty albo spółdzielni nie zabrania trzymania drobiu. Po trzecie - jakie są lokalne uchwały dotyczące odległości budynków gospodarczych od granic działki.</p>
+
+        <p>W Polsce obowiązuje kilka aktów prawnych dotyczących hodowli drobiu. Najważniejsze to ustawa o ochronie zdrowia zwierząt, rozporządzenia dotyczące bioasekuracji (szczególnie ważne w kontekście grypy ptaków) oraz przepisy dotyczące sprzedaży bezpośredniej produktów drobiarskich.</p>
+
+        <div class="tip-box tip-box--important">
+          <div class="tip-box__icon">📌</div>
+          <div class="tip-box__content">
+            <strong class="tip-box__label">Ważne</strong>
+            <p>Każdy posiadacz drobiu - nawet jednej kury - jest zobowiązany do zgłoszenia tego faktu do powiatowego lekarza weterynarii i nadania numeru siedziby stada. To nie jest opcja, to obowiązek prawny. Konsekwencje braku rejestracji mogą być poważne, zwłaszcza w przypadku wybuchu grypy ptaków na twoim terenie.</p>
+          </div>
+        </div>
+
+        <div class="section-divider"><span class="section-divider__ornament">✦</span></div>
+
+        <h2 class="section-title">1.7. Hodowla kur w mieście i na wsi</h2>
+
+        <p>Na wsi kury to norma. Nikt się nie dziwi, nikt nie narzeka, sąsiad sam pewnie trzyma swoje. Problem zaczyna się w mieście i na przedmieściach, gdzie bliskość zabudowy i oczekiwania sąsiadów tworzą zupełnie inne warunki gry.</p>
+
+        <p>W mieście trzymanie kur jest możliwe - ale wymaga więcej planowania. Musisz zadbać o to, żeby kurnik był cichy (kogut w mieście to przepis na konflikt z sąsiadami), czysty (zapach to główna skarga) i estetyczny (ładny kurnik nie razi w oczy). Wybieg musi być zabezpieczony, żeby kury nie chodziły po sąsiednich działkach.</p>
+
+        <p>Na wsi masz więcej swobody, ale nie myśl, że nie musisz się starać. Kury na wsi mają za to więcej naturalnych zagrożeń - lisy, kuny, jastrzębie. Im więcej przestrzeni, tym trudniej to wszystko kontrolować. Za to masz dostęp do tanich pasz, naturalnych pastwisk i - zwykle - życzliwych sąsiadów, którzy chętnie wymienią się doświadczeniami.</p>
+
+        <div class="tip-box tip-box--tip">
+          <div class="tip-box__icon">💡</div>
+          <div class="tip-box__content">
+            <strong class="tip-box__label">Wskazówka</strong>
+            <p>Jeśli planujesz hodowlę w mieście, zacznij od rozmowy z sąsiadami. Pokaż im, jak będzie wyglądał kurnik, wyjaśnij, że nie planujesz koguta, i obiecaj świeże jaja. Większość ludzi jest zaskakująco otwarta, kiedy podchodzisz do tematu uczciwie i z szacunkiem.</p>
+          </div>
+        </div>
+
+        <blockquote class="pull-quote">
+          <p>Hodowla kur to nie kwestia miejsca zamieszkania. To kwestia podejścia. Odpowiedzialny hodowca poradzi sobie i na wiejskim podwórku, i na podmiejskiej działce.</p>
+        </blockquote>
+
+      </div>
+    </article>
+
+    <!-- ==================== PLACEHOLDER ROZDZIAŁY 2-49 ==================== -->
+    <!-- Kolejne rozdziały będą dodawane etapami zgodnie z plan.md -->
+
+    <!-- ==================== STOPKA ==================== -->
+    <footer class="ebook-footer">
+      <p>© 2026 - Wszelkie prawa zastrzeżone</p>
+      <p>Kompleksowy Poradnik Hodowcy Kur · Wydanie 2026</p>
+      <p>Wersja: 1.0 | Format: Ebook HTML</p>
+    </footer>
+
+  </main>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // --- Pasek postępu czytania ---
+    window.addEventListener('scroll', () => {
+      const scrollTop    = window.scrollY;
+      const docHeight    = document.documentElement.scrollHeight - window.innerHeight;
+      const progress     = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      const bar          = document.getElementById('readingProgress');
+      const fill         = document.getElementById('progressFill');
+      const percentLabel = document.getElementById('progressPercent');
+
+      bar.style.width  = progress + '%';
+      fill.style.width = progress + '%';
+      percentLabel.textContent = Math.round(progress) + '%';
+    });
+
+    // --- Intersection Observer: animacje rozdziałów ---
+    const chapters = document.querySelectorAll('.chapter');
+    const chapterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { threshold: 0.05 });
+
+    chapters.forEach(ch => chapterObserver.observe(ch));
+
+    // --- Aktywny link w sidebarze ---
+    const navLinks   = document.querySelectorAll('.sidebar__nav-link');
+    const headings   = document.querySelectorAll('.chapter');
+    const headingObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => link.classList.remove('is-active'));
+          const active = document.querySelector(
+            `.sidebar__nav-link[href="#${entry.target.id}"]`
+          );
+          if (active) active.classList.add('is-active');
+          const chapterNum = entry.target.querySelector('.chapter-number');
+          if (chapterNum) {
+            document.getElementById('currentChapter').textContent = chapterNum.textContent;
+          }
+        }
+      });
+    }, { threshold: 0.3 });
+
+    headings.forEach(h => headingObs.observe(h));
+
+    // --- Toggle sidebar ---
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('is-open');
+      document.getElementById('sidebarOverlay').classList.toggle('is-visible');
+    });
+
+    document.getElementById('sidebarClose').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.remove('is-open');
+      document.getElementById('sidebarOverlay').classList.remove('is-visible');
+    });
+
+    document.getElementById('sidebarOverlay').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.remove('is-open');
+      document.getElementById('sidebarOverlay').classList.remove('is-visible');
+    });
+
+    // Zamknij sidebar po kliknięciu linku
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('sidebar').classList.remove('is-open');
+        document.getElementById('sidebarOverlay').classList.remove('is-visible');
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -11,21 +11,21 @@
 ## ETAP 1 – Szkielet HTML i fundament CSS
 **Cel:** Stworzyć kompletny plik HTML z podstawową strukturą dokumentu i wszystkimi zmiennymi CSS.
 
-- [ ] 1.1. Utworzyć plik `index.html` z poprawną deklaracją `<!DOCTYPE html>`, `<html lang="pl">`, `<head>`, `<body>`
-- [ ] 1.2. Dodać meta tagi (`charset`, `viewport`, `title`)
-- [ ] 1.3. Zaimportować fonty Google: Playfair Display, Lora, Nunito Sans
-- [ ] 1.4. Zdefiniować w `<style>` (lub osobnym `style.css`) wszystkie zmienne CSS w `:root`:
-  - [ ] Paleta kolorów tła (5 zmiennych)
-  - [ ] Paleta kolorów tekstu (4 zmienne)
-  - [ ] Paleta akcentów (4 zmienne)
-  - [ ] Obramowania (3 zmienne)
-  - [ ] Cienie (3 zmienne)
-  - [ ] Fonty (3 zmienne)
-  - [ ] Skala typograficzna (8 zmiennych)
-  - [ ] Zaokrąglenia, przejścia, spacje
-- [ ] 1.5. Dodać style bazowe `body` (font-family, font-size, line-height, kolory, wygładzanie)
-- [ ] 1.6. Dodać style nagłówków `h1-h4` (font-family, line-height, font-weight)
-- [ ] 1.7. Zdefiniować klasy kontenerów: `.ebook-wrapper`, `.content-column`, `.content-column--wide`, `.content-column--full`
+- [x] 1.1. Utworzyć plik `index.html` z poprawną deklaracją `<!DOCTYPE html>`, `<html lang="pl">`, `<head>`, `<body>`
+- [x] 1.2. Dodać meta tagi (`charset`, `viewport`, `title`)
+- [x] 1.3. Zaimportować fonty Google: Playfair Display, Lora, Nunito Sans
+- [x] 1.4. Zdefiniować w `<style>` (lub osobnym `style.css`) wszystkie zmienne CSS w `:root`:
+  - [x] Paleta kolorów tła (5 zmiennych)
+  - [x] Paleta kolorów tekstu (4 zmienne)
+  - [x] Paleta akcentów (4 zmienne)
+  - [x] Obramowania (3 zmienne)
+  - [x] Cienie (3 zmienne)
+  - [x] Fonty (3 zmienne)
+  - [x] Skala typograficzna (8 zmiennych)
+  - [x] Zaokrąglenia, przejścia, spacje
+- [x] 1.5. Dodać style bazowe `body` (font-family, font-size, line-height, kolory, wygładzanie)
+- [x] 1.6. Dodać style nagłówków `h1-h4` (font-family, line-height, font-weight)
+- [x] 1.7. Zdefiniować klasy kontenerów: `.ebook-wrapper`, `.content-column`, `.content-column--wide`, `.content-column--full`
 
 **Weryfikacja:** Plik otwiera się w przeglądarce, tło ma kolor `#FAF7F2`, fonty ładują się poprawnie.
 
@@ -34,11 +34,11 @@
 ## ETAP 2 – Okładka (Cover Page)
 **Cel:** Zbudować sekcję okładki zajmującą pełny ekran.
 
-- [ ] 2.1. Dodać `<section class="cover-page">` z teksturą tła `.cover-page__texture`
-- [ ] 2.2. Dodać tag kompendium, tytuł z elementem `<em>`, podtytuł, separator ozdobny `✦ ✦ ✦`
-- [ ] 2.3. Dodać metadane (50 Rozdziałów · 600+ Stron · Wydanie 2025)
-- [ ] 2.4. Dodać ilustrację (emoji 🐔)
-- [ ] 2.5. Napisać pełne style CSS dla okładki (pełnoekranowa, flex, ciemne tło, faktura drewna)
+- [x] 2.1. Dodać `<section class="cover-page">` z teksturą tła `.cover-page__texture`
+- [x] 2.2. Dodać tag kompendium, tytuł z elementem `<em>`, podtytuł, separator ozdobny `✦ ✦ ✦`
+- [x] 2.3. Dodać metadane (50 Rozdziałów · 600+ Stron · Wydanie 2026)
+- [x] 2.4. Dodać ilustrację (emoji 🐔)
+- [x] 2.5. Napisać pełne style CSS dla okładki (pełnoekranowa, flex, ciemne tło, faktura drewna)
 
 **Weryfikacja:** Okładka zajmuje cały viewport, tytuł jest wycentrowany, tekstura tła widoczna, kolory zgodne z dokumentacją.
 
@@ -47,10 +47,10 @@
 ## ETAP 3 – Pasek górny (Topbar) i pasek postępu czytania
 **Cel:** Zbudować sticky topbar z przyciskiem menu i paskiem postępu.
 
-- [ ] 3.1. Dodać `<div class="topbar">` z przyciskiem hamburger, tytułem książki i wskaźnikiem bieżącego rozdziału
-- [ ] 3.2. Dodać `<div class="reading-progress">` dla paska postępu
-- [ ] 3.3. Napisać style CSS (sticky, backdrop-filter blur, przezroczystość)
-- [ ] 3.4. Napisać JavaScript - aktualizacja paska postępu przy scrollowaniu
+- [x] 3.1. Dodać `<div class="topbar">` z przyciskiem hamburger, tytułem książki i wskaźnikiem bieżącego rozdziału
+- [x] 3.2. Dodać `<div class="reading-progress">` dla paska postępu
+- [x] 3.3. Napisać style CSS (sticky, backdrop-filter blur, przezroczystość)
+- [x] 3.4. Napisać JavaScript - aktualizacja paska postępu przy scrollowaniu
 
 **Weryfikacja:** Pasek górny jest przyklejony do góry, pasek postępu rośnie podczas przewijania strony.
 
@@ -59,12 +59,12 @@
 ## ETAP 4 – Nawigacja boczna (Sidebar)
 **Cel:** Zbudować panel boczny z pełnym spisem treści.
 
-- [ ] 4.1. Dodać `<nav class="sidebar">` z nagłówkiem (logo 🐔, tytuł, przycisk zamknięcia)
-- [ ] 4.2. Dodać pasek postępu czytania w sidebarze
-- [ ] 4.3. Dodać `<ul class="sidebar__nav">` z podziałem na Części (I-XV) i linkami do rozdziałów (1-49)
-- [ ] 4.4. Dodać `<div class="sidebar-overlay">` 
-- [ ] 4.5. Napisać style CSS (fixed, transform, animacja wjazdu, style linków, stan aktywny)
-- [ ] 4.6. Napisać JavaScript - otwieranie/zamykanie sidebara, zamykanie przez overlay
+- [x] 4.1. Dodać `<nav class="sidebar">` z nagłówkiem (logo 🐔, tytuł, przycisk zamknięcia)
+- [x] 4.2. Dodać pasek postępu czytania w sidebarze
+- [x] 4.3. Dodać `<ul class="sidebar__nav">` z podziałem na Części (I-XV) i linkami do rozdziałów (1-49)
+- [x] 4.4. Dodać `<div class="sidebar-overlay">` 
+- [x] 4.5. Napisać style CSS (fixed, transform, animacja wjazdu, style linków, stan aktywny)
+- [x] 4.6. Napisać JavaScript - otwieranie/zamykanie sidebara, zamykanie przez overlay
 
 **Weryfikacja:** Sidebar wysuwa się od lewej po kliknięciu hamburgera, zamyka się po kliknięciu ✕ lub overlay.
 
@@ -73,9 +73,9 @@
 ## ETAP 5 – Strona tytułowa / Wstęp (Front Matter)
 **Cel:** Zaimplementować stronę wstępną przed rozdziałami.
 
-- [ ] 5.1. Dodać `<section class="front-matter">` z krótkim wstępem do ebooka
-- [ ] 5.2. Napisać treść wstępną (kilka akapitów w stylu opisanym w `styl_pisania_ebooka.md`)
-- [ ] 5.3. Ostylować sekcję (kolumna 720px, marginesy, typografia)
+- [x] 5.1. Dodać `<section class="front-matter">` z krótkim wstępem do ebooka
+- [x] 5.2. Napisać treść wstępną (kilka akapitów w stylu opisanym w `styl_pisania_ebooka.md`)
+- [x] 5.3. Ostylować sekcję (kolumna 720px, marginesy, typografia)
 
 **Weryfikacja:** Wstęp wyświetla się po okładce, tekst jest czytelny, w kolumnie 720px.
 
@@ -84,11 +84,11 @@
 ## ETAP 6 – Spis treści (TOC Page)
 **Cel:** Zbudować interaktywny spis treści z numerami stron i nawigacją.
 
-- [ ] 6.1. Dodać `<section class="toc-page">` z tytułem "Spis treści"
-- [ ] 6.2. Dodać bloki `.toc-part` dla każdej Części (I-XV)
-- [ ] 6.3. W każdym bloku dodać elementy `.toc-list__item` z nazwami rozdziałów, kropkami i numerami stron
-- [ ] 6.4. Dodać linki `<a href="#chapter-X">` do każdego rozdziału
-- [ ] 6.5. Napisać style CSS (etykiety części, linia kropek, numery stron, hover)
+- [x] 6.1. Dodać `<section class="toc-page">` z tytułem "Spis treści"
+- [x] 6.2. Dodać bloki `.toc-part` dla każdej Części (I-XV)
+- [x] 6.3. W każdym bloku dodać elementy `.toc-list__item` z nazwami rozdziałów, kropkami i numerami stron
+- [x] 6.4. Dodać linki `<a href="#chapter-X">` do każdego rozdziału
+- [x] 6.5. Napisać style CSS (etykiety części, linia kropek, numery stron, hover)
 
 **Weryfikacja:** Spis treści wyświetla wszystkie 49 rozdziałów z podziałem na części, kliknięcie przenosi do rozdziału.
 
@@ -97,17 +97,17 @@
 ## ETAP 7 – Komponenty wielokrotnego użytku
 **Cel:** Zaimplementować i przetestować wszystkie komponenty wizualne, zanim zostaną użyte w rozdziałach.
 
-- [ ] 7.1. **Nagłówek rozdziału** `.chapter-header` - ciemne tło, wzór siatki, numer, tytuł, lead, meta
-- [ ] 7.2. **Akapit i tekst główny** - drop cap (inicjał), max-width 68ch, powiększony akapit po nagłówku
-- [ ] 7.3. **Cytat wyróżniony** `.pull-quote` - lewy border złoty, cudzysłów dekoracyjny, kursywa
-- [ ] 7.4. **Ramki z poradami** `.tip-box` - 4 warianty:
-  - [ ] 7.4.1. `tip-box--tip` (💡 Wskazówka - zielona)
-  - [ ] 7.4.2. `tip-box--warning` (⚠️ Uwaga - pomarańczowa)
-  - [ ] 7.4.3. `tip-box--important` (📌 Ważne - terakotowa)
-  - [ ] 7.4.4. `tip-box--fact` (🌾 Ciekawostka - beżowa)
-- [ ] 7.5. **Listy stylizowane** - `ul` z kółkami w kolorze złota, `ol` z numerami w kółkach
-- [ ] 7.6. **Tabela** `.data-table` - ciemny nagłówek, zebra stripes, hover, caption
-- [ ] 7.7. **Separator** `.section-divider` - linia z ornamentem ✦
+- [x] 7.1. **Nagłówek rozdziału** `.chapter-header` - ciemne tło, wzór siatki, numer, tytuł, lead, meta
+- [x] 7.2. **Akapit i tekst główny** - drop cap (inicjał), max-width 68ch, powiększony akapit po nagłówku
+- [x] 7.3. **Cytat wyróżniony** `.pull-quote` - lewy border złoty, cudzysłów dekoracyjny, kursywa
+- [x] 7.4. **Ramki z poradami** `.tip-box` - 4 warianty:
+  - [x] 7.4.1. `tip-box--tip` (💡 Wskazówka - zielona)
+  - [x] 7.4.2. `tip-box--warning` (⚠️ Uwaga - pomarańczowa)
+  - [x] 7.4.3. `tip-box--important` (📌 Ważne - terakotowa)
+  - [x] 7.4.4. `tip-box--fact` (🌾 Ciekawostka - beżowa)
+- [x] 7.5. **Listy stylizowane** - `ul` z kółkami w kolorze złota, `ol` z numerami w kółkach
+- [x] 7.6. **Tabela** `.data-table` - ciemny nagłówek, zebra stripes, hover, caption
+- [x] 7.7. **Separator** `.section-divider` - linia z ornamentem ✦
 
 **Weryfikacja:** Każdy komponent wyświetla się poprawnie na stronie testowej, kolory i fonty są zgodne z dokumentacją.
 
@@ -116,17 +116,17 @@
 ## ETAP 8 – Rozdział 1: "Dlaczego warto hodować kury?"
 **Cel:** Napisać i zaimplementować pierwszy pełny rozdział jako wzorzec.
 
-- [ ] 8.1. Dodać `<article class="chapter" id="chapter-1">` z nagłówkiem rozdziału
-- [ ] 8.2. Napisać treść podrozdziałów 1.1-1.7 zgodnie ze stylem z `styl_pisania_ebooka.md`:
-  - [ ] 1.1. Historia domestykacji kury domowej
-  - [ ] 1.2. Korzyści z hodowli przydomowej
-  - [ ] 1.3. Hodowla jako hobby vs. zarobkowa
-  - [ ] 1.4. Wpływ na środowisko i zrównoważone rolnictwo
-  - [ ] 1.5. Psychologiczne aspekty
-  - [ ] 1.6. Aspekty prawne w Polsce
-  - [ ] 1.7. Hodowla w mieście vs. na wsi
-- [ ] 8.3. Użyć w treści komponentów: pull-quote, tip-box (min. 2 warianty), lista, separator
-- [ ] 8.4. Sprawdzić checklist edytora z `styl_pisania_ebooka.md`
+- [x] 8.1. Dodać `<article class="chapter" id="chapter-1">` z nagłówkiem rozdziału
+- [x] 8.2. Napisać treść podrozdziałów 1.1-1.7 zgodnie ze stylem z `styl_pisania_ebooka.md`:
+  - [x] 1.1. Historia domestykacji kury domowej
+  - [x] 1.2. Korzyści z hodowli przydomowej
+  - [x] 1.3. Hodowla jako hobby vs. zarobkowa
+  - [x] 1.4. Wpływ na środowisko i zrównoważone rolnictwo
+  - [x] 1.5. Psychologiczne aspekty
+  - [x] 1.6. Aspekty prawne w Polsce
+  - [x] 1.7. Hodowla w mieście vs. na wsi
+- [x] 8.3. Użyć w treści komponentów: pull-quote, tip-box (min. 2 warianty), lista, separator
+- [x] 8.4. Sprawdzić checklist edytora z `styl_pisania_ebooka.md`
 
 **Weryfikacja:** Rozdział 1 wyświetla się poprawnie, wszystkie komponenty działają, treść spełnia kryteria stylistyczne.
 
