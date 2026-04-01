@@ -1,0 +1,221 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Nunito+Sans:wght@300;400;600&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg1:#FAF7F2;--bg2:#F2EDE4;--bgd:#2C2416;--bga:#4A3728;
+  --t1:#2C2416;--t2:#6B5744;--tm:#9E8B7A;--ti:#FAF7F2;
+  --a1:#8B6914;--a2:#C4722A;--ag:#5C7A3E;
+  --bl:#E0D5C5;--bm:#C5B49A;
+  --fd:'Playfair Display',Georgia,serif;
+  --fb:'Lora','Times New Roman',serif;
+  --fu:'Nunito Sans',sans-serif;
+}
+
+.frame{background:var(--bg1);font-family:var(--fb);color:var(--t1);line-height:1.85;font-size:16px;max-width:860px;margin:0 auto}
+
+/* TOPBAR */
+.topbar{background:rgba(250,247,242,0.96);border-bottom:1px solid var(--bl);padding:10px 20px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:10}
+.topbar-btn{display:flex;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:4px}
+.topbar-btn span{display:block;width:20px;height:2px;background:var(--t1);border-radius:2px}
+.topbar-title{font-family:var(--fd);font-size:13px;color:var(--t2);flex:1}
+.topbar-chap{font-family:var(--fu);font-size:11px;color:var(--tm)}
+.progress-bar{position:absolute;top:0;left:0;height:3px;background:var(--a1);width:38%}
+
+/* CHAPTER HEADER */
+.ch-header{background:var(--bgd);color:var(--ti);padding:52px 32px 40px;position:relative;overflow:hidden}
+.ch-header-grid{position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,.03) 39px,rgba(255,255,255,.03) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,.03) 39px,rgba(255,255,255,.03) 40px);pointer-events:none}
+.ch-num{font-family:var(--fu);font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--a1);display:block;margin-bottom:10px}
+.ch-title{font-family:var(--fd);font-size:clamp(1.7rem,4vw,2.5rem);font-weight:700;line-height:1.1;margin-bottom:16px}
+.ch-lead{font-family:var(--fb);font-size:17px;font-style:italic;color:rgba(250,247,242,.7);max-width:54ch;line-height:1.65;margin-bottom:24px}
+.ch-meta{display:flex;gap:20px}
+.ch-meta span{font-family:var(--fu);font-size:11px;color:rgba(250,247,242,.45)}
+
+/* BODY */
+.ch-body{max-width:680px;margin:0 auto;padding:44px 24px}
+
+/* DROPCAP */
+.dropcap::first-letter{font-family:var(--fd);font-size:4.2em;font-weight:700;float:left;line-height:.78;margin-right:.09em;margin-top:.08em;color:var(--a1)}
+
+p.body-p{margin-bottom:1.4rem;max-width:66ch}
+
+h2.sec{font-family:var(--fd);font-size:1.55rem;font-weight:700;margin:2.8rem 0 .9rem;padding-bottom:.45rem;border-bottom:2px solid var(--bl)}
+h3.sub{font-family:var(--fd);font-size:1.2rem;font-style:italic;font-weight:600;color:var(--t2);margin:2rem 0 .7rem}
+
+/* PULLQUOTE */
+.pq{position:relative;margin:2.5rem 0;padding:1.4rem 1.5rem 1.4rem 2.5rem;background:var(--bg2);border-left:4px solid var(--a1);border-radius:0 8px 8px 0}
+.pq::before{content:'\201C';font-family:var(--fd);font-size:5.5rem;color:var(--a1);opacity:.22;position:absolute;top:-.9rem;left:.9rem;line-height:1}
+.pq p{font-family:var(--fd);font-size:1.15rem;font-style:italic;line-height:1.5;color:var(--t1)}
+
+/* TIP BOXES */
+.tip{display:flex;gap:12px;margin:1.8rem 0;padding:1.1rem 1.3rem;border-radius:8px;border:1px solid transparent}
+.tip-icon{font-size:18px;flex-shrink:0;margin-top:2px}
+.tip-label{display:block;font-family:var(--fu);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px}
+.tip-content p{margin:0;font-size:14px;line-height:1.6;color:var(--t1)}
+.tip-tip{background:#F0F7E8;border-color:#A8CC7A}.tip-tip .tip-label{color:var(--ag)}
+.tip-warn{background:#FEF3E2;border-color:#E8A84A}.tip-warn .tip-label{color:#B87420}
+.tip-imp{background:#F5EDE8;border-color:#C4722A}.tip-imp .tip-label{color:var(--a2)}
+.tip-fact{background:#F5F0E8;border-color:var(--bm)}.tip-fact .tip-label{color:var(--a1)}
+
+/* DIVIDER */
+.divider{display:flex;align-items:center;justify-content:center;margin:2.8rem 0;gap:12px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,var(--bm),transparent)}
+.divider span{color:var(--a1);font-size:12px}
+
+/* TABLE */
+.tbl-wrap{overflow-x:auto;margin:2rem 0;border-radius:8px;border:1px solid var(--bl);box-shadow:0 2px 10px rgba(44,36,22,.07)}
+table{width:100%;border-collapse:collapse;font-family:var(--fu);font-size:13px}
+thead{background:var(--bgd);color:var(--ti)}
+th{padding:11px 16px;text-align:left;font-weight:600;letter-spacing:.05em;font-size:10px;text-transform:uppercase}
+td{padding:10px 16px;color:var(--t1);border-bottom:1px solid var(--bl)}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:var(--bg1)}
+tr:hover td{background:var(--bg2)}
+caption{font-family:var(--fb);font-style:italic;font-size:12px;color:var(--tm);padding:8px 16px;text-align:left;caption-side:top}
+
+/* TOC SAMPLE */
+.toc-wrap{background:var(--bg2);padding:28px 28px;border-radius:10px;margin:2rem 0;border:1px solid var(--bl)}
+.toc-part-label{font-family:var(--fu);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--a1);padding-bottom:8px;border-bottom:1px solid var(--bl);margin-bottom:8px}
+.toc-row{display:flex;align-items:baseline;gap:6px;padding:5px 0;font-size:14px}
+.toc-name{flex-shrink:0;font-family:var(--fb);color:var(--t2)}
+.toc-dots{flex:1;border-bottom:1px dotted var(--bm);margin-bottom:3px}
+.toc-pg{font-family:var(--fu);font-size:12px;color:var(--tm);flex-shrink:0}
+
+/* COVER STRIP */
+.cover-strip{background:var(--bgd);color:var(--ti);padding:36px 24px;text-align:center;position:relative;overflow:hidden}
+.cover-strip-texture{position:absolute;inset:0;background-image:repeating-linear-gradient(88deg,transparent 0,transparent 18px,rgba(255,255,255,.012) 18px,rgba(255,255,255,.012) 19px),repeating-linear-gradient(92deg,transparent 0,transparent 35px,rgba(255,255,255,.008) 35px,rgba(255,255,255,.008) 36px);pointer-events:none}
+.cover-tag{font-family:var(--fu);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--a1);margin-bottom:14px}
+.cover-title{font-family:var(--fd);font-size:clamp(1.8rem,5vw,3rem);font-weight:700;line-height:1.05;margin-bottom:12px}
+.cover-title em{font-style:italic;color:var(--a1)}
+.cover-sub{font-family:var(--fb);font-style:italic;color:rgba(250,247,242,.55);font-size:15px;margin-bottom:18px}
+.cover-orn{color:var(--a1);font-size:11px;letter-spacing:.4em;margin-bottom:14px}
+.cover-meta{display:flex;justify-content:center;gap:10px;font-family:var(--fu);font-size:11px;color:rgba(250,247,242,.35)}
+.cover-emoji{font-size:36px;margin-top:18px;opacity:.55}
+
+/* SIDEBAR MOCKUP */
+.sidebar-demo{background:var(--bga);color:var(--ti);padding:16px;border-radius:8px;margin:2rem 0}
+.sd-head{font-family:var(--fd);font-size:14px;font-weight:600;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.sd-part{font-family:var(--fu);font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--a1);padding:8px 0 3px}
+.sd-link{display:block;padding:5px 0;font-family:var(--fu);font-size:12px;color:rgba(250,247,242,.6);text-decoration:none;border-left:3px solid transparent;padding-left:8px}
+.sd-link.active{color:var(--ti);border-color:var(--a1);background:rgba(139,105,20,.12)}
+</style>
+
+<div class="frame">
+
+  <!-- TOPBAR -->
+  <div class="topbar" style="position:relative">
+    <div class="progress-bar"></div>
+    <button class="topbar-btn"><span></span><span></span><span></span></button>
+    <div class="topbar-title">Kompleksowy Poradnik Hodowcy Kur</div>
+    <div class="topbar-chap">Rozdział 7</div>
+  </div>
+
+  <!-- OKŁADKA MINI -->
+  <div class="cover-strip">
+    <div class="cover-strip-texture"></div>
+    <div class="cover-tag">Kompendium wiedzy hodowcy</div>
+    <h1 class="cover-title">Kompleksowy <em>Poradnik</em><br>Hodowcy Kur</h1>
+    <p class="cover-sub">Od pierwszego pisklęcia do pełnej hodowli</p>
+    <div class="cover-orn">✦ ✦ ✦</div>
+    <div class="cover-meta"><span>50 Rozdziałów</span><span>·</span><span>600+ Stron</span><span>·</span><span>Wydanie 2025</span></div>
+    <div class="cover-emoji">🐔</div>
+  </div>
+
+  <!-- CHAPTER HEADER -->
+  <div class="ch-header">
+    <div class="ch-header-grid"></div>
+    <span class="ch-num">Rozdział 7</span>
+    <h2 class="ch-title">Projektowanie i budowa kurnika</h2>
+    <p class="ch-lead">Kurnik to fundament całej hodowli. Można kupić najlepsze kury świata, ale jeśli mieszkają źle, nie dadzą ci ani jaja więcej niż przeciętna.</p>
+    <div class="ch-meta">
+      <span>⏱ Czas czytania: ok. 18 minut</span>
+      <span>📄 12 podrozdziałów</span>
+    </div>
+  </div>
+
+  <!-- TREŚĆ -->
+  <div class="ch-body">
+
+    <!-- TOC SAMPLE -->
+    <div class="toc-wrap">
+      <div class="toc-part-label">Część III - Infrastruktura</div>
+      <div class="toc-row"><span class="toc-name">Projektowanie i budowa kurnika</span><span class="toc-dots"></span><span class="toc-pg">84</span></div>
+      <div class="toc-row"><span class="toc-name">Wyposażenie kurnika</span><span class="toc-dots"></span><span class="toc-pg">102</span></div>
+      <div class="toc-row"><span class="toc-name">Wybieg i pastewnik</span><span class="toc-dots"></span><span class="toc-pg">118</span></div>
+    </div>
+
+    <h2 class="sec">7.1. Lokalizacja kurnika</h2>
+
+    <p class="body-p dropcap">Wybór miejsca pod kurnik to jedna z tych decyzji, których później nie cofniesz bez łopaty i cierpliwości. Zanim wbijesz pierwszy słupek, spaceruj po swojej działce przez kilka dni o różnych porach - rano, w południe, wieczorem. Patrz skąd wieje wiatr, gdzie stoi woda po deszczu, gdzie pada cień.</p>
+
+    <p class="body-p">Idealne położenie to lekkie wzniesienie, osłonięte od północy i zachodu, z wejściem skierowanym na południe lub południowy wschód. Poranne słońce wchodzi do wnętrza, naturalnie ogrzewa i osusza podściółkę. Kury wychodzą na wybieg chętniej, gdy środowisko jest suche i jasne już od rana.</p>
+
+    <div class="tip tip-warn">
+      <div class="tip-icon">⚠️</div>
+      <div class="tip-content">
+        <strong class="tip-label">Uwaga</strong>
+        <p>Nigdy nie buduj kurnika w zagłębieniu terenu. Woda po deszczu musi mieć gdzie spłynąć - wilgoć to główna przyczyna chorób układu oddechowego u kur.</p>
+      </div>
+    </div>
+
+    <div class="tip tip-tip">
+      <div class="tip-icon">💡</div>
+      <div class="tip-content">
+        <strong class="tip-label">Wskazówka</strong>
+        <p>Orientuj kurnik wejściem na południe. Rano słońce wchodzi do środka i naturalnie osusza podściółkę bez żadnych kosztów.</p>
+      </div>
+    </div>
+
+    <div class="pq"><p>Kurnik to nie koszt. To inwestycja, która zwraca się przez dziesięć lat - pod warunkiem, że postawisz go raz, a dobrze.</p></div>
+
+    <h2 class="sec">7.2. Minimalne wymiary</h2>
+
+    <h3 class="sub">System ściółkowy - normy powierzchniowe</h3>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption>Minimalne normy powierzchni wg systemu utrzymania</caption>
+        <thead><tr><th>System</th><th>Min. m² na kurę</th><th>Grzędy (cm)</th><th>Gniazda</th></tr></thead>
+        <tbody>
+          <tr><td>Ściółkowy zamknięty</td><td>0,25</td><td>15-18</td><td>1 na 4-5 kur</td></tr>
+          <tr><td>Wolny wybieg (UE)</td><td>0,11 wewn. + 4 m² zewn.</td><td>15</td><td>1 na 7 kur</td></tr>
+          <tr><td>Ekologiczny (BIO)</td><td>0,10 wewn. + 4 m² zewn.</td><td>18</td><td>1 na 7 kur</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tip tip-imp">
+      <div class="tip-icon">📌</div>
+      <div class="tip-content">
+        <strong class="tip-label">Ważne</strong>
+        <p>Te normy to minimalne wymagania prawne. Dla zdrowia i dobrostanu kur warto dawać im więcej - przynajmniej 0,5 m² na sztukę w kurniku.</p>
+      </div>
+    </div>
+
+    <div class="tip tip-fact">
+      <div class="tip-icon">🌾</div>
+      <div class="tip-content">
+        <strong class="tip-label">Ciekawostka</strong>
+        <p>Kury preferują grzędy na wysokości 40-60 cm nad podłogą. Wyżej nie oznacza lepiej - zbyt wysokie grzędy powodują kontuzje przy zeskakiwaniu.</p>
+      </div>
+    </div>
+
+    <div class="divider"><span>✦</span></div>
+
+    <!-- SIDEBAR DEMO -->
+    <div class="sidebar-demo">
+      <div class="sd-head"><span style="font-size:18px">🐔</span> Spis treści</div>
+      <div class="sd-part">Część I - Podstawy</div>
+      <a class="sd-link">1. Dlaczego warto hodować kury?</a>
+      <a class="sd-link">2. Planowanie hodowli</a>
+      <div class="sd-part">Część III - Infrastruktura</div>
+      <a class="sd-link active">7. Projektowanie i budowa kurnika</a>
+      <a class="sd-link">8. Wyposażenie kurnika</a>
+      <a class="sd-link">9. Wybieg i pastewnik</a>
+    </div>
+
+    <p class="body-p" style="font-family:var(--fu);font-size:13px;color:var(--tm);text-align:center;margin-top:2rem">Podgląd demonstracyjny - dokumentacja techniczna HTML ebooka</p>
+
+  </div>
+</div>
