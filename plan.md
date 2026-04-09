@@ -135,37 +135,37 @@
 ## ETAP 9 – Rozdział 2: "Planowanie hodowli"
 **Cel:** Napisać i zaimplementować Rozdział 2.
 
-- [ ] 9.1. Dodać `<article class="chapter" id="chapter-2">` z nagłówkiem
-- [ ] 9.2. Napisać treść podrozdziałów 2.1-2.8
-- [ ] 9.3. Użyć tabeli (np. porównanie budżetów), checklisty startowej, tip-boxów
-- [ ] 9.4. Sprawdzić checklist edytora
+- [x] 9.1. Dodać `<article class="chapter" id="chapter-2">` z nagłówkiem
+- [x] 9.2. Napisać treść podrozdziałów 2.1-2.8
+- [x] 9.3. Użyć tabeli (np. porównanie budżetów), checklisty startowej, tip-boxów
+- [x] 9.4. Sprawdzić checklist edytora
 
 ---
 
 ## ETAP 10 – Rozdziały 3-6 (CZĘŚĆ II – Rasy i genetyka)
 **Cel:** Napisać i zaimplementować rozdziały o rasach i genetyce.
 
-- [ ] 10.1. Rozdział 3: Rasy jajeczne (3.1-3.9) - z tabelą porównawczą ras
-- [ ] 10.2. Rozdział 4: Rasy mięsne (4.1-4.7) - z zestawieniem czasu odchowu
-- [ ] 10.3. Rozdział 5: Rasy ogólnoużytkowe i ozdobne (5.1-5.9)
-- [ ] 10.4. Rozdział 6: Podstawy genetyki drobiu (6.1-6.10)
+- [x] 10.1. Rozdział 3: Rasy jajeczne (3.1-3.9) - z tabelą porównawczą ras
+- [x] 10.2. Rozdział 4: Rasy mięsne (4.1-4.7) - z zestawieniem czasu odchowu
+- [x] 10.3. Rozdział 5: Rasy ogólnoużytkowe i ozdobne (5.1-5.9)
+- [x] 10.4. Rozdział 6: Podstawy genetyki drobiu (6.1-6.10)
 
 ---
 
 ## ETAP 11 – Rozdziały 7-9 (CZĘŚĆ III – Infrastruktura)
 **Cel:** Napisać i zaimplementować rozdziały o infrastrukturze.
 
-- [ ] 11.1. Rozdział 7: Projektowanie i budowa kurnika (7.1-7.12)
-- [ ] 11.2. Rozdział 8: Wyposażenie kurnika (8.1-8.10) - z podrozdziałami zagnieżdżonymi
-- [ ] 11.3. Rozdział 9: Wybieg i pastewnik (9.1-9.8)
+- [x] 11.1. Rozdział 7: Projektowanie i budowa kurnika (7.1-7.12)
+- [x] 11.2. Rozdział 8: Wyposażenie kurnika (8.1-8.10) - z podrozdziałami zagnieżdżonymi
+- [x] 11.3. Rozdział 9: Wybieg i pastewnik (9.1-9.8)
 
 ---
 
 ## ETAP 12 – Rozdziały 10-13 (CZĘŚĆ IV – Żywienie)
 **Cel:** Napisać i zaimplementować rozdziały o żywieniu.
 
-- [ ] 12.1. Rozdział 10: Podstawy żywienia (10.1-10.7)
-- [ ] 12.2. Rozdział 11: Rodzaje pasz (11.1-11.12)
+- [x] 12.1. Rozdział 10: Podstawy żywienia (10.1-10.7)
+- [x] 12.2. Rozdział 11: Rodzaje pasz (11.1-11.12)
 - [ ] 12.3. Rozdział 12: Naturalne żywienie (12.1-12.10) - z zagnieżdżonymi podrozdziałami
 - [ ] 12.4. Rozdział 13: Bilansowanie diety (13.1-13.6) - z recepturami
 
