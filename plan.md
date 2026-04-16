@@ -166,46 +166,46 @@
 
 - [x] 12.1. Rozdział 10: Podstawy żywienia (10.1-10.7)
 - [x] 12.2. Rozdział 11: Rodzaje pasz (11.1-11.12)
-- [ ] 12.3. Rozdział 12: Naturalne żywienie (12.1-12.10) - z zagnieżdżonymi podrozdziałami
-- [ ] 12.4. Rozdział 13: Bilansowanie diety (13.1-13.6) - z recepturami
+- [x] 12.3. Rozdział 12: Naturalne żywienie (12.1-12.10) - z zagnieżdżonymi podrozdziałami
+- [x] 12.4. Rozdział 13: Bilansowanie diety (13.1-13.6) - z recepturami
 
 ---
 
 ## ETAP 13 – Rozdziały 14-16 (CZĘŚĆ V – Nieśność i produkcja jaj)
 
-- [ ] 13.1. Rozdział 14: Fizjologia nieśności (14.1-14.8)
-- [ ] 13.2. Rozdział 15: Optymalizacja produkcji jaj (15.1-15.7)
-- [ ] 13.3. Rozdział 16: Zbieranie i przechowywanie jaj (16.1-16.10)
+- [x] 13.1. Rozdział 14: Fizjologia nieśności (14.1-14.8)
+- [x] 13.2. Rozdział 15: Optymalizacja produkcji jaj (15.1-15.7)
+- [x] 13.3. Rozdział 16: Zbieranie i przechowywanie jaj (16.1-16.10)
 
 ---
 
 ## ETAP 14 – Rozdziały 17-19 (CZĘŚĆ VI – Rozmnażanie i wylęganie)
 
-- [ ] 14.1. Rozdział 17: Rozmnażanie naturalne (17.1-17.7)
-- [ ] 14.2. Rozdział 18: Kwoczenie (18.1-18.9)
-- [ ] 14.3. Rozdział 19: Inkubacja sztuczna (19.1-19.14)
+- [x] 14.1. Rozdział 17: Rozmnażanie naturalne (17.1-17.7)
+- [x] 14.2. Rozdział 18: Kwoczenie (18.1-18.9)
+- [x] 14.3. Rozdział 19: Inkubacja sztuczna (19.1-19.14)
 
 ---
 
 ## ETAP 15 – Rozdziały 20-22 (CZĘŚĆ VII – Odchów piskląt)
 
-- [ ] 15.1. Rozdział 20: Pierwsze dni pisklęcia (20.1-20.7)
-- [ ] 15.2. Rozdział 21: Odchów do 8 tygodnia (21.1-21.8) - z podrozdziałami zagnieżdżonymi
-- [ ] 15.3. Rozdział 22: Młode kury 8-18 tydzień (22.1-22.6)
+- [x] 15.1. Rozdział 20: Pierwsze dni pisklęcia (20.1-20.7)
+- [x] 15.2. Rozdział 21: Odchów do 8 tygodnia (21.1-21.8) - z podrozdziałami zagnieżdżonymi
+- [x] 15.3. Rozdział 22: Młode kury 8-18 tydzień (22.1-22.6)
 
 ---
 
 ## ETAP 16 – Rozdziały 23-30 (CZĘŚĆ VIII – Zdrowie i weterynaria)
 **Uwaga:** Najdłuższa część - 8 rozdziałów, wiele zagnieżdżonych podrozdziałów.
 
-- [ ] 16.1. Rozdział 23: Podstawy zdrowia (23.1-23.6)
-- [ ] 16.2. Rozdział 24: Choroby wirusowe (24.1-24.9) - rozbudowane podrozdziały
-- [ ] 16.3. Rozdział 25: Choroby bakteryjne (25.1-25.9)
-- [ ] 16.4. Rozdział 26: Choroby pasożytnicze (26.1-26.3) - głęboko zagnieżdżone
-- [ ] 16.5. Rozdział 27: Choroby niedoborowe (27.1-27.9)
-- [ ] 16.6. Rozdział 28: Problemy behawioralne (28.1-28.6)
-- [ ] 16.7. Rozdział 29: Apteczka i pierwsza pomoc (29.1-29.10)
-- [ ] 16.8. Rozdział 30: Szczepienia i profilaktyka (30.1-30.8)
+- [x] 16.1. Rozdział 23: Podstawy zdrowia (23.1-23.6)
+- [x] 16.2. Rozdział 24: Choroby wirusowe (24.1-24.9) - rozbudowane podrozdziały
+- [x] 16.3. Rozdział 25: Choroby bakteryjne (25.1-25.9)
+- [x] 16.4. Rozdział 26: Choroby pasożytnicze (26.1-26.3) - głęboko zagnieżdżone
+- [x] 16.5. Rozdział 27: Choroby niedoborowe (27.1-27.9)
+- [x] 16.6. Rozdział 28: Problemy behawioralne (28.1-28.6)
+- [x] 16.7. Rozdział 29: Apteczka i pierwsza pomoc (29.1-29.10)
+- [x] 16.8. Rozdział 30: Szczepienia i profilaktyka (30.1-30.8)
 
 ---
 
