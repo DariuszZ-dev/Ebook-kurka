@@ -211,42 +211,42 @@
 
 ## ETAP 17 – Rozdziały 31-33 (CZĘŚĆ IX – Zarządzanie kurnikiem)
 
-- [ ] 17.1. Rozdział 31: Higiena i biosekuryta (31.1-31.8)
-- [ ] 17.2. Rozdział 32: Zarządzanie odchodami (32.1-32.8)
-- [ ] 17.3. Rozdział 33: Sezonowe zarządzanie (33.1-33.4) - z podrozdziałami sezonowymi
+- [x] 17.1. Rozdział 31: Higiena i biosekuryta (31.1-31.8)
+- [x] 17.2. Rozdział 32: Zarządzanie odchodami (32.1-32.8)
+- [x] 17.3. Rozdział 33: Sezonowe zarządzanie (33.1-33.4) - z podrozdziałami sezonowymi
 
 ---
 
 ## ETAP 18 – Rozdziały 34-36 (CZĘŚĆ X – Ekonomika)
 
-- [ ] 18.1. Rozdział 34: Rachunkowość (34.1-34.7)
-- [ ] 18.2. Rozdział 35: Sprzedaż produktów (35.1-35.8)
-- [ ] 18.3. Rozdział 36: Skalowanie hodowli (36.1-36.6)
+- [x] 18.1. Rozdział 34: Rachunkowość (34.1-34.7)
+- [x] 18.2. Rozdział 35: Sprzedaż produktów (35.1-35.8)
+- [x] 18.3. Rozdział 36: Skalowanie hodowli (36.1-36.6)
 
 ---
 
 ## ETAP 19 – Rozdziały 37-39 (CZĘŚĆ XI – Hodowla ekologiczna)
 
-- [ ] 19.1. Rozdział 37: Hodowla ekologiczna (37.1-37.5)
-- [ ] 19.2. Rozdział 38: Permakultura i kury (38.1-38.6)
-- [ ] 19.3. Rozdział 39: Alternatywne systemy utrzymania (39.1-39.7)
+- [x] 19.1. Rozdział 37: Hodowla ekologiczna (37.1-37.5)
+- [x] 19.2. Rozdział 38: Permakultura i kury (38.1-38.6)
+- [x] 19.3. Rozdział 39: Alternatywne systemy utrzymania (39.1-39.7)
 
 ---
 
 ## ETAP 20 – Rozdziały 40-42 (CZĘŚĆ XII – Hodowla wystawowa)
 
-- [ ] 20.1. Rozdział 40: Wystawy drobiu (40.1-40.5)
-- [ ] 20.2. Rozdział 41: Przygotowanie kur do wystawy (41.1-41.7)
-- [ ] 20.3. Rozdział 42: Sędziowanie i ocenianie (42.1-42.5)
+- [x] 20.1. Rozdział 40: Wystawy drobiu (40.1-40.5)
+- [x] 20.2. Rozdział 41: Przygotowanie kur do wystawy (41.1-41.7)
+- [x] 20.3. Rozdział 42: Sędziowanie i ocenianie (42.1-42.5)
 
 ---
 
 ## ETAP 21 – Rozdziały 43-46 (CZĘŚĆ XIII – Zaawansowane techniki)
 
-- [ ] 21.1. Rozdział 43: Zaawansowana selekcja (43.1-43.6)
-- [ ] 21.2. Rozdział 44: Zaawansowana reprodukcja (44.1-44.4) - z podrozdziałami
-- [ ] 21.3. Rozdział 45: Żywienie precyzyjne (45.1-45.8)
-- [ ] 21.4. Rozdział 46: Diagnostyka laboratoryjna (46.1-46.7)
+- [x] 21.1. Rozdział 43: Zaawansowana selekcja (43.1-43.6)
+- [x] 21.2. Rozdział 44: Zaawansowana reprodukcja (44.1-44.4) - z podrozdziałami
+- [x] 21.3. Rozdział 45: Żywienie precyzyjne (45.1-45.8)
+- [x] 21.4. Rozdział 46: Diagnostyka laboratoryjna (46.1-46.7)
 
 ---
 
