@@ -797,21 +797,65 @@ h3.subsection-title {
   background:  var(--color-bg-dark);
   color:       var(--color-text-inverse);
   text-align:  center;
-  padding:     4rem 2rem;
+  padding:     5rem 2rem 3rem;
   font-family: var(--font-ui);
   font-size:   var(--text-sm);
+  margin-top:  2rem;
 }
 
-.ebook-footer p {
-  color:         rgba(250, 247, 242, 0.5);
-  margin-bottom: 0.5rem;
+.ebook-footer__brand {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  gap:             0.75rem;
+  margin-bottom:   1.5rem;
 }
 
-/* ---- ANIMACJE ---- */
+.ebook-footer__logo {
+  font-size: 2rem;
+}
+
+.ebook-footer__title {
+  font-family: var(--font-display);
+  font-size:   var(--text-lg);
+  font-weight: 600;
+  color:       var(--color-text-inverse);
+}
+
+.ebook-footer__info p {
+  color:         rgba(250, 247, 242, 0.55);
+  margin-bottom: 0.35rem;
+  font-size:     var(--text-sm);
+}
+
+.ebook-footer__divider {
+  width:         60px;
+  height:        1px;
+  background:    var(--color-accent-primary);
+  margin:        2rem auto;
+  opacity:       0.6;
+}
+
+.ebook-footer__bottom p {
+  margin-bottom: 0.35rem;
+}
+
+.ebook-footer__copyright {
+  color:     rgba(250, 247, 242, 0.5);
+  font-size: var(--text-sm);
+}
+
+.ebook-footer__version {
+  color:     rgba(250, 247, 242, 0.3);
+  font-size: var(--text-xs);
+}
+
+/* ---- ANIMACJE ROZDZIAŁÓW ---- */
 .chapter {
   opacity:    0;
-  transform:  translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform:  translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .chapter.is-visible {
@@ -819,40 +863,386 @@ h3.subsection-title {
   transform: translateY(0);
 }
 
+/* ---- LINKI ---- */
 a {
   color:      var(--color-accent-warm);
   transition: color var(--transition-fast);
 }
 a:hover { color: var(--color-accent-primary); }
 
+/* ---- HOVER NA TOPBAR MENU ---- */
+.topbar__menu-btn:hover span {
+  background: var(--color-accent-primary);
+}
+
+/* ---- HOVER NA TABELI ---- */
+.data-table tbody tr {
+  transition: background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.data-table tbody tr:hover {
+  background: rgba(139, 105, 20, 0.06);
+}
+
+/* ---- SCROLL TABELI NA MOBILE ---- */
+.chapter-body .data-table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ---- TIP BOX HEADER LAYOUT ---- */
+.tip-box__header {
+  display:     flex;
+  align-items: center;
+  gap:         0.5rem;
+}
+
+/* ---- REDUCED MOTION ---- */
 @media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
   html { scroll-behavior: auto; }
+  .chapter {
+    opacity: 1;
+    transform: none;
+  }
+  .sidebar {
+    transition: none;
+  }
 }
 
 /* ---- RESPONSYWNOŚĆ ---- */
+
+/* Tablet */
 @media (max-width: 1024px) {
   .main-content { margin-left: 0; }
+  :root {
+    --space-section: 4rem;
+    --space-block: 2.5rem;
+  }
 }
 
+/* Mały tablet / duży mobile */
 @media (max-width: 768px) {
-  .chapter-header { padding: 3rem 0 2.5rem; }
-  .chapter-header .chapter-title { font-size: var(--text-xl); }
-  .chapter-lead { font-size: var(--text-base); }
-  .content-column, .content-column--wide { padding: 0 1.25rem; }
-  .chapter-body { padding-top: 2rem; padding-bottom: 3rem; }
-  .tip-box { flex-direction: column; gap: 0.5rem; }
-  .pull-quote { padding: 1.25rem 1.25rem 1.25rem 2rem; }
-  .pull-quote p { font-size: var(--text-base); }
-  .cover-page__meta { flex-wrap: wrap; justify-content: center; }
+  :root {
+    --text-3xl: 3rem;
+    --text-2xl: 2.25rem;
+    --text-xl: 1.75rem;
+    --space-section: 3rem;
+    --space-block: 2rem;
+  }
+
+  .chapter-header {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .chapter-header .chapter-title {
+    font-size: var(--text-xl);
+  }
+
+  .chapter-lead {
+    font-size: var(--text-base);
+  }
+
+  .content-column,
+  .content-column--wide {
+    padding: 0 1.25rem;
+  }
+
+  .chapter-body {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .tip-box {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .pull-quote {
+    padding: 1.25rem 1.25rem 1.25rem 2rem;
+    margin: 2rem 0;
+  }
+
+  .pull-quote p {
+    font-size: var(--text-base);
+  }
+
+  .pull-quote::before {
+    font-size: 4rem;
+    top: -0.5rem;
+    left: 0.5rem;
+  }
+
+  .cover-page {
+    padding: 3rem 1.5rem;
+  }
+
+  .cover-page__title {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+  }
+
+  .cover-page__meta {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .cover-page__illustration {
+    font-size: 3.5rem;
+    margin-top: 2rem;
+  }
+
+  .toc-page {
+    padding: 3rem 1.25rem;
+  }
+
+  .toc-page__title {
+    font-size: var(--text-xl);
+    margin-bottom: 2rem;
+  }
+
+  .sidebar {
+    width: 85vw;
+    max-width: 320px;
+  }
+
+  .topbar {
+    padding: 0.65rem 1rem;
+  }
+
+  .topbar__title {
+    font-size: var(--text-xs);
+  }
+
+  /* Tabele - zapewnij scrollowanie */
+  .chapter-body .data-table {
+    font-size: var(--text-xs);
+  }
+
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 0.6rem 0.75rem;
+  }
+
+  /* Listy */
+  .chapter-body ul li,
+  .chapter-body ol li {
+    font-size: var(--text-sm);
+  }
+
+  /* Nagłówki sekcji */
+  h2.section-title {
+    font-size: var(--text-lg);
+    margin-top: 2rem;
+  }
+
+  /* Footer */
+  .ebook-footer {
+    padding: 3rem 1.25rem 2rem;
+  }
+
+  .ebook-footer__title {
+    font-size: var(--text-md);
+  }
 }
 
-/* ---- PRINT ---- */
-@media print {
-  .sidebar, .topbar, .reading-progress, .sidebar-overlay { display: none !important; }
-  body { background: white; font-size: 12pt; }
-  .chapter-header { background: var(--color-bg-dark) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .chapter { page-break-before: always; opacity: 1 !important; transform: none !important; }
-  a { color: inherit; text-decoration: none; }
-  .tip-box { border: 1px solid #ccc; background: #f9f9f9 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+/* Mobile mały */
+@media (max-width: 480px) {
+  :root {
+    --text-2xl: 1.875rem;
+    --text-xl: 1.5rem;
+    --text-lg: 1.25rem;
+  }
+
+  .chapter-header {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .chapter-meta {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .cover-page__title {
+    font-size: clamp(1.75rem, 10vw, 2.5rem);
+  }
+
+  .cover-page__subtitle {
+    font-size: var(--text-base);
+  }
+
+  .chapter-body > p:first-of-type::first-letter {
+    font-size: 3.5em;
+  }
+
+  .pull-quote {
+    padding: 1rem 1rem 1rem 1.5rem;
+  }
+
+  .topbar__chapter {
+    display: none;
+  }
 }
+
+/* ---- STYLE DRUKU (PRINT) ---- */
+@media print {
+  /* Ukryj nawigację i UI */
+  .sidebar,
+  .topbar,
+  .reading-progress,
+  .sidebar-overlay,
+  .cover-page__illustration {
+    display: none !important;
+  }
+
+  /* Reset tła i kolorów */
+  body {
+    background: white;
+    color: black;
+    font-size: 11pt;
+    line-height: 1.6;
+  }
+
+  /* Reset layoutu */
+  .main-content {
+    margin: 0;
+    padding: 0;
+  }
+
+  .content-column,
+  .content-column--wide {
+    max-width: 100%;
+    padding: 0 1cm;
+  }
+
+  /* Rozdziały - łamanie stron */
+  .chapter {
+    page-break-before: always;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .chapter:first-of-type {
+    page-break-before: avoid;
+  }
+
+  /* Nagłówki rozdziałów */
+  .chapter-header {
+    background: #2C2416 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    color: white !important;
+    padding: 2cm 1cm;
+  }
+
+  .chapter-header .chapter-title {
+    font-size: 22pt;
+    color: white !important;
+  }
+
+  .chapter-lead {
+    color: rgba(255,255,255,0.8) !important;
+    font-size: 11pt;
+  }
+
+  .chapter-number {
+    color: #8B6914 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Treść */
+  .chapter-body {
+    padding: 1cm 0;
+  }
+
+  .chapter-body p {
+    max-width: 100%;
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Łamanie - nie dziel tych elementów */
+  .tip-box,
+  .pull-quote,
+  .data-table,
+  blockquote,
+  h2,
+  h3 {
+    page-break-inside: avoid;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  /* Linki - pokaż URL */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Tip-boxy */
+  .tip-box {
+    border: 1px solid #999;
+    background: #f5f5f5 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Pull-quote */
+  .pull-quote {
+    border-left: 3px solid #666;
+    background: #f0f0f0 !important;
+  }
+
+  /* Tabele */
+  .data-table {
+    font-size: 9pt;
+  }
+
+  .data-table thead {
+    background: #333 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Separator */
+  .section-divider {
+    margin: 1.5cm 0;
+  }
+
+  /* Okładka */
+  .cover-page {
+    min-height: auto;
+    padding: 3cm 2cm;
+    page-break-after: always;
+  }
+
+  /* Stopka */
+  .ebook-footer {
+    background: #2C2416 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    page-break-before: always;
+    padding: 2cm 1cm;
+  }
+
+  /* Drop cap */
+  .chapter-body > p:first-of-type::first-letter {
+    color: #333;
+  }
+
+  /* TOC */
+  .toc-page {
+    page-break-after: always;
+  }
+}
+

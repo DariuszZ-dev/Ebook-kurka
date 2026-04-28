@@ -252,40 +252,40 @@
 
 ## ETAP 22 – Rozdziały 47-48 (CZĘŚĆ XIV – Kontekst globalny)
 
-- [ ] 22.1. Rozdział 47: Światowa produkcja drobiu (47.1-47.5)
-- [ ] 22.2. Rozdział 48: Zmiany klimatyczne a hodowla (48.1-48.4)
+- [x] 22.1. Rozdział 47: Światowa produkcja drobiu (47.1-47.5)
+- [x] 22.2. Rozdział 48: Zmiany klimatyczne a hodowla (48.1-48.4)
 
 ---
 
 ## ETAP 23 – Rozdział 49 (CZĘŚĆ XV – Zasoby) + Załączniki
 
-- [ ] 23.1. Rozdział 49: Nauka i doskonalenie się (49.1-49.3)
-- [ ] 23.2. Załącznik A: Tabele i normy (A.1-A.7)
-- [ ] 23.3. Załącznik B: Wzory dokumentów (B.1-B.7)
-- [ ] 23.4. Załącznik C: Słownik pojęć (C.1-C.2)
-- [ ] 23.5. Załącznik D: Przepisy prawne (D.1-D.4)
-- [ ] 23.6. Indeks rzeczowy
-- [ ] 23.7. Sekcja "O Autorze"
+- [x] 23.1. Rozdział 49: Nauka i doskonalenie się (49.1-49.3)
+- [x] 23.2. Załącznik A: Tabele i normy (A.1-A.7)
+- [x] 23.3. Załącznik B: Wzory dokumentów (B.1-B.7)
+- [x] 23.4. Załącznik C: Słownik pojęć (C.1-C.2)
+- [x] 23.5. Załącznik D: Przepisy prawne (D.1-D.4)
+- [x] 23.6. Indeks rzeczowy
+- [x] 23.7. Sekcja "O Autorze"
 
 ---
 
 ## ETAP 24 – Stopka ebooka (Footer)
 
-- [ ] 24.1. Dodać `<footer class="ebook-footer">` z informacjami o prawach autorskich
-- [ ] 24.2. Dodać informacje o wersji i formatach
-- [ ] 24.3. Ostylować stopkę
+- [x] 24.1. Dodać `<footer class="ebook-footer">` z informacjami o prawach autorskich
+- [x] 24.2. Dodać informacje o wersji i formatach
+- [x] 24.3. Ostylować stopkę
 
 ---
 
 ## ETAP 25 – JavaScript: Interaktywność
 **Cel:** Dodać pełną interaktywność ebooka.
 
-- [ ] 25.1. IntersectionObserver - animacje wjazdu rozdziałów (`.is-visible`)
-- [ ] 25.2. IntersectionObserver - aktywny link w sidebarze (`.is-active`)
-- [ ] 25.3. Aktualizacja nazwy rozdziału w topbarze przy scrollowaniu
-- [ ] 25.4. Toggle sidebar - otwieranie (hamburger), zamykanie (✕), zamykanie (overlay)
-- [ ] 25.5. Pasek postępu czytania - aktualizacja przy scrollowaniu
-- [ ] 25.6. Smooth scroll po kliknięciu linków w TOC i sidebarze
+- [x] 25.1. IntersectionObserver - animacje wjazdu rozdziałów (`.is-visible`)
+- [x] 25.2. IntersectionObserver - aktywny link w sidebarze (`.is-active`)
+- [x] 25.3. Aktualizacja nazwy rozdziału w topbarze przy scrollowaniu
+- [x] 25.4. Toggle sidebar - otwieranie (hamburger), zamykanie (✕), zamykanie (overlay)
+- [x] 25.5. Pasek postępu czytania - aktualizacja przy scrollowaniu
+- [x] 25.6. Smooth scroll po kliknięciu linków w TOC i sidebarze
 
 **Weryfikacja:** Wszystkie elementy interaktywne działają płynnie, sidebar otwiera/zamyka się, pasek postępu rośnie.
 
@@ -294,14 +294,14 @@
 ## ETAP 26 – Responsywność (RWD)
 **Cel:** Zapewnić poprawne wyświetlanie na wszystkich urządzeniach.
 
-- [ ] 26.1. Media queries dla tabletu (`max-width: 1024px`)
-- [ ] 26.2. Media queries dla mobile (`max-width: 768px`):
-  - [ ] Zmniejszone paddingi nagłówków rozdziałów
-  - [ ] Mniejsze tytuły rozdziałów
-  - [ ] Tip-boxy w kolumnie (flex-direction: column)
-  - [ ] Mniejsze pull-quote
-  - [ ] Cover meta wrap
-- [ ] 26.3. Testowanie na różnych szerokościach ekranu
+- [x] 26.1. Media queries dla tabletu (`max-width: 1024px`)
+- [x] 26.2. Media queries dla mobile (`max-width: 768px`):
+  - [x] Zmniejszone paddingi nagłówków rozdziałów
+  - [x] Mniejsze tytuły rozdziałów
+  - [x] Tip-boxy w kolumnie (flex-direction: column)
+  - [x] Mniejsze pull-quote
+  - [x] Cover meta wrap
+- [x] 26.3. Testowanie na różnych szerokościach ekranu
 
 **Weryfikacja:** Ebook wygląda dobrze na desktop (1920px), tablet (768px) i mobile (375px).
 
@@ -310,11 +310,11 @@
 ## ETAP 27 – Animacje i przejścia
 **Cel:** Dodać subtelne animacje.
 
-- [ ] 27.1. Animacja wejścia rozdziałów (opacity + translateY)
-- [ ] 27.2. Hover na linkach (zmiana koloru)
-- [ ] 27.3. Animacja wjazdu sidebara (transform + cubic-bezier)
-- [ ] 27.4. Smooth scroll (`scroll-behavior: smooth`)
-- [ ] 27.5. `@media (prefers-reduced-motion: reduce)` - wyłączenie animacji dla użytkowników z taką preferencją
+- [x] 27.1. Animacja wejścia rozdziałów (opacity + translateY)
+- [x] 27.2. Hover na linkach (zmiana koloru)
+- [x] 27.3. Animacja wjazdu sidebara (transform + cubic-bezier)
+- [x] 27.4. Smooth scroll (`scroll-behavior: smooth`)
+- [x] 27.5. `@media (prefers-reduced-motion: reduce)` - wyłączenie animacji dla użytkowników z taką preferencją
 
 **Weryfikacja:** Animacje są subtelne i płynne, nie przeszkadzają w czytaniu.
 
@@ -323,11 +323,11 @@
 ## ETAP 28 – Style druku (Print Styles)
 **Cel:** Zapewnić poprawne drukowanie/eksport do PDF.
 
-- [ ] 28.1. Ukrycie sidebara, topbara, paska postępu, overlay
-- [ ] 28.2. Białe tło, rozmiar czcionki 12pt
-- [ ] 28.3. Page-break-before dla rozdziałów
-- [ ] 28.4. Resetowanie opacity i transform
-- [ ] 28.5. Uproszczenie linków i tip-boxów
+- [x] 28.1. Ukrycie sidebara, topbara, paska postępu, overlay
+- [x] 28.2. Białe tło, rozmiar czcionki 12pt
+- [x] 28.3. Page-break-before dla rozdziałów
+- [x] 28.4. Resetowanie opacity i transform
+- [x] 28.5. Uproszczenie linków i tip-boxów
 
 **Weryfikacja:** Podgląd wydruku w przeglądarce (Ctrl+P) wygląda czytelnie i profesjonalnie.
 
@@ -336,13 +336,13 @@
 ## ETAP 29 – Końcowy przegląd i polerowanie
 **Cel:** Ostateczna kontrola jakości.
 
-- [ ] 29.1. Sprawdzić spójność kolorów ze zmiennymi CSS (brak hardkodów)
-- [ ] 29.2. Sprawdzić poprawność wszystkich linków wewnętrznych (nawigacja)
-- [ ] 29.3. Sprawdzić treść pod kątem checklisty edytora (`styl_pisania_ebooka.md`)
-- [ ] 29.4. Walidacja HTML (brak zduplikowanych ID, poprawna semantyka)
-- [ ] 29.5. Test wydajności przy dużym dokumencie (płynność scrollowania)
-- [ ] 29.6. Sprawdzić dostępność (aria-labels, kontrast, focusowalność)
-- [ ] 29.7. Optymalizacja rozmiaru pliku
+- [x] 29.1. Sprawdzić spójność kolorów ze zmiennymi CSS (brak hardkodów)
+- [x] 29.2. Sprawdzić poprawność wszystkich linków wewnętrznych (nawigacja)
+- [x] 29.3. Sprawdzić treść pod kątem checklisty edytora (`styl_pisania_ebooka.md`)
+- [x] 29.4. Walidacja HTML (brak zduplikowanych ID, poprawna semantyka)
+- [x] 29.5. Test wydajności przy dużym dokumencie (płynność scrollowania)
+- [x] 29.6. Sprawdzić dostępność (aria-labels, kontrast, focusowalność)
+- [x] 29.7. Optymalizacja rozmiaru pliku
 
 ---
 
